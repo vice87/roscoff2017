@@ -33,20 +33,10 @@ translationTable = {
 nt2rc = { 'A':'T', 'C':'G', 'G':'C', 'T':'A' }
 
 def translateSequence(ntSeq):
-    index = 0
-    lastValidIndex = len(ntSeq) - 3
-    aaSeq = ""
-    while index <= lastValidIndex:
-        aaSeq += translationTable[ ntSeq[index:index+3] ]
-        index += 3
-    return aaSeq
+    pass
 
 def reverseComplement(ntSeq):
-    compSeq = ''
-    for car in ntSeq:
-        compSeq = nt2rc[car] + compSeq
-    return compSeq
-
+    pass
 
 def main():
     argv = sys.argv
@@ -56,8 +46,8 @@ def main():
     with open(inputFasta,'r') as inputFile:
         for line in inputFile:
             line = line.strip()
-            if line == "": 
-				continue
+            if line == "":
+		continue
 
     return 0
 
